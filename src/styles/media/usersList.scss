@@ -1,0 +1,15 @@
+@import './mixins';
+
+.users-list-view {
+  &__list-title {
+    @include media('650') {
+      font-size: 1.3rem !important;
+    }
+  }
+  @include media('970') {
+    width: 85% !important;
+  }
+  @include media('650') {
+    width: 95% !important;
+  }
+}

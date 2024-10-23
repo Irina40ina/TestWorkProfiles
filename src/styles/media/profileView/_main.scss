@@ -1,0 +1,55 @@
+@import '../mixins';
+
+.profile-view {
+    @include media('970') {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important; 
+        grid-template-rows: none !important; 
+        height: max-content !important;
+
+    }
+    @include media('850') {
+        width: 90% !important;
+    }
+
+    &__header {
+        @include media('970') {
+            order: 1 !important;
+            font-size: 2rem !important;
+        }
+        @include media('970') {
+            font-size: 1.8rem !important;
+        }
+    }
+
+    &__albums-list {
+        @include media('970') {
+            order: 2 !important;
+            overflow-y: hidden !important;
+            height: 30% !important;
+            width: 100% !important;
+        }
+    }
+
+    &__albums-wrapper {
+        @include media('970') {
+            flex-direction: row !important;
+            justify-content: start !important;
+            height: 100% !important;
+            gap: 2rem !important;
+            overflow-x: auto !important;
+        }
+    }
+    &__albums-wrapper::-webkit-scrollbar {
+        @include media('970') {
+            display: none;
+        }
+    }
+
+    &__post-container {
+        @include media('970') {
+            order: 3 !important;
+        }
+    }
+}

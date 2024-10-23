@@ -1,0 +1,17 @@
+@import '../mixins';
+
+.album-container {
+    @include media('970') {
+        min-width: 250px !important;
+        height: 300px !important;
+    }
+    @include media('850') {
+        min-width: 220px !important;
+        height: 250px !important;
+    }
+    &__album-title {
+        @include media('970') {
+            font-size: .8rem;
+        }
+    }
+}

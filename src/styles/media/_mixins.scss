@@ -1,0 +1,21 @@
+
+$breakpoints: (
+  '970': 970px,
+  '850': 850px,
+  '650': 650px,
+  
+);
+
+@mixin media($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $max-width: map-get($breakpoints, $breakpoint);
+
+        @media (max-width: $max-width) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "No such breakpoint: #{$breakpoint}";
+    }
+}
